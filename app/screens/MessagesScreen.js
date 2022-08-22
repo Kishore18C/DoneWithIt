@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList} from "react-native";
 
 import Screen from "../components/Screen";
 import {
@@ -29,7 +29,6 @@ function MessagesScreen(props) {
   const [refreshing, setRefreshing] = useState(false);
 
   const handleDelete = (message) => {
-    // Delete the message from messages
     setMessages(messages.filter((m) => m.id !== message.id));
   };
 
@@ -65,7 +64,5 @@ function MessagesScreen(props) {
     </Screen>
   );
 }
-
-const styles = StyleSheet.create({});
 
 export default MessagesScreen;

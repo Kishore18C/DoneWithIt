@@ -28,7 +28,7 @@ const menuItems = [
 ];
 
 function AccountScreen({ navigation }) {
-  const { user, logOut } = useAuth()
+  // const { user, logOut } = useAuth()
 
   return (
     <Screen style={styles.screen}>
@@ -61,7 +61,7 @@ function AccountScreen({ navigation }) {
       <ListItem
         title="Log Out"
         IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
-        onPress={() => logOut()}
+        // onPress={() => logOut()}
       />
     </Screen>
   );

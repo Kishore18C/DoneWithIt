@@ -19,9 +19,9 @@ function ListingDetailsScreen({ route }) {
 
       <Image
         style={styles.image}
-        preview={{ uri: listing.images[0].thumbnailUrl }}
+        preview={{ uri: listing.images.url }}
         tint="light"
-        uri={listing.images[0].url}
+        uri={listing.images.url}
       />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
@@ -30,7 +30,7 @@ function ListingDetailsScreen({ route }) {
           <ListItem
             image={require("../assets/icon.png")}
             title="Kishore"
-            subTitle="5 Listings"
+            subTitle="Listings"
           />
         </View>
       </View>

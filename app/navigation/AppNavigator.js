@@ -8,13 +8,13 @@ import FeedNavigator from "./FeedNavigator";
 import ListingEditScreen from "../screens/ListingEditScreen";
 import NewListingButton from "./NewListingButton";
 import routes from "./routes";
-import useNotification from "../hooks/useNotification";
+// import useNotification from "../hooks/useNotification";
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
 
-  useNotification()
+  // useNotification()
 
   return (
     <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: colors.primary }}>
@@ -36,13 +36,13 @@ const AppNavigator = () => {
               onPress={() => navigation.navigate(routes.LISTING_EDIT)}
             />
           ),
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="plus-circle"
-              color={color}
-              size={size}
-            />
-          ),
+          // tabBarIcon: ({ color, size }) => (
+          //   <MaterialCommunityIcons
+          //     name="plus-circle"
+          //     color={color}
+          //     size={size}
+          //   />
+          // ),
         })}
       />
       <Tab.Screen
