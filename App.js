@@ -10,7 +10,7 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 export default function App() {
 
   return (
-    <AuthContext.Provider  >
+    <>
       <OfflineNotice />
       <NavigationContainer>
         <AppNavigator />
@@ -18,6 +18,6 @@ export default function App() {
          {/* <LoginScreen/> */}
         {/* <RegisterScreen/> */}
       </NavigationContainer>
-    </AuthContext.Provider>
+      </>
   );
 }

@@ -7,30 +7,11 @@ import {
     FormField,
     SubmitButton,
 } from "../components/forms"
-import messageApi from '../api/messages'
 
 function ContactSellerForm({ listing }) {
-    const handleSubmit = async ({ message }, { resetForm }) => {
+    const handleSubmit = async ({ resetForm }) => {
         Keyboard.dismiss()
-
-        const result = await messageApi.send(message, listing.id)
-
-        if (!result.ok) {
-            console.log('Unexpected error', result)
-            return Alert.alert('Error', "Could not find the error")
-        }
-
         resetForm()
-
-        Notifications.scheduleNotificationAsync({
-            content: {
-                title: 'Awesome',
-                body: 'Your message was sent'
-            },
-            trigger: {
-                seconds: 0.1
-            }
-        })
     }
 
     return (
@@ -48,10 +29,5 @@ function ContactSellerForm({ listing }) {
         </View>
     );
 }
-
-// const styles = StyleSheet.create({
-//     container: {}
-// });
-// }
 
 export default ContactSellerForm;
